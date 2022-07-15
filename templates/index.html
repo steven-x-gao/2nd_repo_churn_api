@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  
+  <h2>Predict Churn Probability in the Following Month</h2>
+  
+  <form method="POST" action="/">
+    Days since last visit:<br>
+    <input type="number" step="any" name="se_recency" value=60>
+    <br><br>
+    Number of items user has added  to cart:<br>
+    <input type="number" step="any" name="added_item_n" value=60>
+    <br><br>
+    Total time user spent online:<br>
+    <input type="number" step="any" name="tse_len" value=60>
+    <br><br>
+    Number of sessions user had:<br>
+    <input type="number" step="any" name="se_n" value=60>
+    <br><br>
+    Time of period between first and last event:<br>
+    <input type="number" step="any" name="dt_flevent" value=60>
+    <br><br>
+    How many sessions user had per day:<br>
+    <input type="number" step="any" name="se_per_day" value=60>
+    <br><br>
+    How many times addtocart per session:<br>
+    <input type="number" step="any" name="avg_atc_se" value=60>
+    <br><br>
+    Average duration of each session:<br>
+    <input type="number" step="any" name="avg_se_len" value=60>
+    <br><br>
+    How many times of user transaction:<br>
+    <input type="number" step="any" name="transid_n" value=60>
+    <br><br>
+    Average event numbers per session:<br>
+    <input type="number" step="any" name="avg_ev_se" value=60>
+    <br><br>
+    Average item numbers in each time of view:<br>
+    <input type="number" step="any" name="avg_itn_view" value=60>
+    <br><br>
+    Average item numbers in each event:<br>
+    <input type="number" step="any" name="avg_itn_ev" value=60>
+    <br><br>
+    Average number of items in each addtocart:<br>
+    <input type="number" step="any" name="avg_itn_atc" value=60>
+    <br><br>
+    Average transaction times per session:<br>
+    <input type="number" step="any" name="avg_transid_se" value=60>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if pred %}
+  <p>The churn probability in next month is {{ pred }}</p>
+  {% endif %}
+
+  </body>
+</html>
+
