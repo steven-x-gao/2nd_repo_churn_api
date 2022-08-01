@@ -1,6 +1,7 @@
 # 2nd_repo_churn_api
 
 1.This is a ecom_chur API for predicting online user loss for an e-Commerce business;
+
 2. Final data were cleaned out from 2.7 million rows of timestamps raw_data of 4 month user browsing records;
 
 3. Users who has no record in the last month but were actively buying or adding to cart were difined churn customers(class 1);
